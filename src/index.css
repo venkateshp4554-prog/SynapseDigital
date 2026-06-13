@@ -135,7 +135,9 @@ body {
 
 /* Signature GitHub Green button */
 .btn-primary {
-  @apply relative inline-flex items-center justify-center font-semibold rounded-md px-5 py-2.5 transition-all bg-[#2ea44f] hover:bg-[#3fb950] text-white shadow-sm border border-[#2ea44f]/10 hover:scale-[1.01] active:scale-[0.99] cursor-pointer;
+  @apply relative inline-flex items-center justify-center font-semibold rounded-md px-5 py-2.5 transition-all text-white shadow-sm border border-transparent hover:scale-[1.01] active:scale-[0.99] cursor-pointer;
+  background-image: linear-gradient(90deg,#7c3aed 0%,#06b6d4 100%);
+  box-shadow: 0 6px 18px rgba(124,58,237,0.12), 0 2px 6px rgba(6,182,212,0.06);
 }
 
 /* Signature GitHub Dark Border button */
@@ -164,3 +166,61 @@ body {
 .dark .bg-radial-glow {
   background: radial-gradient(circle 800px at 50% -200px, rgba(99, 102, 241, 0.15), transparent);
 }
+
+/* 3D logo and card accents */
+.logo-3d {
+  transform: perspective(600px) translateZ(0);
+  will-change: transform;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(124,58,237,0.18), 0 2px 6px rgba(6,182,212,0.08), inset 0 -6px 14px rgba(0,0,0,0.02);
+  transition: transform 240ms ease, box-shadow 240ms ease, filter 240ms ease;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.08));
+}
+.logo-3d:hover {
+  transform: perspective(700px) rotateX(4deg) translateY(-2px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(124,58,237,0.16), 0 8px 18px rgba(6,182,212,0.08);
+}
+
+.card-3d {
+  transition: transform 320ms cubic-bezier(.2,.9,.2,1), box-shadow 320ms ease;
+}
+.card-3d:hover {
+  transform: translateY(-10px) rotateX(1deg) translateZ(6px);
+  box-shadow: 0 24px 50px rgba(2,6,23,0.12), 0 6px 18px rgba(124,58,237,0.06);
+}
+
+/* 3D tilt effect using transform styles */
+.tilt-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.tilt-3d-inner {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+  transform-origin: center;
+}
+.tilt-3d:hover .tilt-3d-inner {
+  box-shadow: 0 30px 60px rgba(2,6,23,0.14), 0 10px 30px rgba(124,58,237,0.06);
+}
+
+/* Hero specific styles */
+.hero-title {
+  text-wrap: balance;
+  text-shadow: 0 6px 18px rgba(124,58,237,0.06), 0 2px 6px rgba(6,182,212,0.04);
+}
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: rgba(36,41,47,0.8);
+}
+.hero-cta {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(124,58,237,0.12), 0 4px 12px rgba(6,182,212,0.06);
+}
+
+/* Product image overlay and price ribbon */
+.product-image-wrap { position: relative; overflow: hidden; }
+.product-image-gradient { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.18) 100%); pointer-events:none; }
+.price-ribbon { position: absolute; left: 12px; top: 12px; background: linear-gradient(90deg,#00000020,#00000040); color: white; padding: 6px 10px; border-radius: 9999px; font-weight: 600; font-size: 0.9rem; backdrop-filter: blur(6px); }

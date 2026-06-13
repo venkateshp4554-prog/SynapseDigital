@@ -7,13 +7,13 @@ export const Testimonials: React.FC = () => {
     {
       name: 'Sarah Jenkins',
       role: 'CTO, TechFlow Inc.',
-      content: 'Synapse Digital completely revitalized our cloud architecture. Their engineers migrated our legacy systems to a serverless AWS setup with zero downtime. Simply outstanding technical execution.',
+      content: 'SeVenDor Solutions completely revitalized our cloud architecture. Their engineers migrated our legacy systems to a serverless AWS setup with zero downtime. Simply outstanding technical execution.',
       rating: 5,
     },
     {
       name: 'Michael Chang',
       role: 'Product Director, Velo Mobile',
-      content: 'The UI/UX design team at Synapse is outstanding. They delivered a highly interactive, responsive mobile interface. User engagement metrics rose by 35% in our first month after release.',
+      content: 'The UI/UX design team at SeVenDor Solutions is outstanding. They delivered a highly interactive, responsive mobile interface. User engagement metrics rose by 35% in our first month after release.',
       rating: 5,
     },
     {

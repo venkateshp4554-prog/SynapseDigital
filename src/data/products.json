@@ -1,0 +1,492 @@
+[
+  {
+    "id": 1,
+    "slug": "sonic-mesh-wireless-headphones",
+    "name": "Sonic Mesh Wireless Headphones",
+    "category": "Audio",
+    "brand": "Aeris Audio",
+    "price": 149.99,
+    "rating": 4.7,
+    "reviews": 128,
+    "stock": 18,
+    "description": "Experience premium audio with adaptive noise cancellation, breathable memory foam cushions, and a 30-hour playback battery.",
+    "shortDescription": "Adaptive ANC wireless headphones with immersive sound.",
+    "images": [
+      "https://images.unsplash.com/photo-1518444864644-5ddf5db228af?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1512496015851-a73f0f5efd6e?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Battery Life": "30 hours",
+      "Connectivity": "Bluetooth 5.3",
+      "Driver": "40mm neodymium",
+      "Weight": "245g"
+    },
+    "features": [
+      "Active noise cancellation",
+      "Quick charge support",
+      "Foldable travel design",
+      "Premium audio tuning"
+    ],
+    "badges": ["Best seller", "Free shipping"],
+    "popularity": 92,
+    "createdAt": "2026-05-24"
+  },
+  {
+    "id": 2,
+    "slug": "nova-elite-smartwatch",
+    "name": "Nova Elite Smartwatch",
+    "category": "Wearables",
+    "brand": "LumaTech",
+    "price": 219.0,
+    "rating": 4.5,
+    "reviews": 86,
+    "stock": 5,
+    "description": "A polished smartwatch with health tracking, built-in GPS, and a customizable AMOLED display for every lifestyle.",
+    "shortDescription": "Sleek health-first smartwatch with premium AMOLED display.",
+    "images": [
+      "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1536305035342-6db6b9ac0c8a?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Display": "1.4\" AMOLED",
+      "Battery Life": "7 days",
+      "Water Resistance": "5 ATM",
+      "Sensors": "Heart rate, SpO2, GPS"
+    },
+    "features": [
+      "Sleep score and wellness tips",
+      "GPS run tracking",
+      "Custom watch faces",
+      "Mobile notifications"
+    ],
+    "badges": ["Trending", "Low stock"],
+    "popularity": 78,
+    "createdAt": "2026-06-02"
+  },
+  {
+    "id": 3,
+    "slug": "athena-pro-gaming-keyboard",
+    "name": "Athena Pro Gaming Keyboard",
+    "category": "Gaming",
+    "brand": "PulseForge",
+    "price": 129.5,
+    "rating": 4.8,
+    "reviews": 214,
+    "stock": 24,
+    "description": "Mechanical RGB keyboard with hot-swappable switches, dedicated macro controls, and a durable aluminum frame.",
+    "shortDescription": "Precision mechanical keyboard built for fast-paced gaming.",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Switch Type": "Hot-swappable mechanical",
+      "Lighting": "Per-key RGB",
+      "Connection": "USB-C wired",
+      "Layout": "Full-size"
+    },
+    "features": [
+      "Custom macro layers",
+      "Detachable wrist rest",
+      "Ultra-responsive keys",
+      "Durable PBT keycaps"
+    ],
+    "badges": ["Popular", "Fast delivery"],
+    "popularity": 88,
+    "createdAt": "2026-04-14"
+  },
+  {
+    "id": 4,
+    "slug": "lumina-ceramic-smart-lamp",
+    "name": "Lumina Ceramic Smart Lamp",
+    "category": "Home",
+    "brand": "BrightNest",
+    "price": 89.99,
+    "rating": 4.4,
+    "reviews": 51,
+    "stock": 12,
+    "description": "A minimalist smart lamp with scene presets, voice control, and warm ambient lighting for modern interiors.",
+    "shortDescription": "Voice-ready smart lamp with scene-based lighting.",
+    "images": [
+      "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Light Modes": "5 presets",
+      "Control": "App + voice",
+      "Power": "12W",
+      "Compatibility": "Alexa, Google Assistant"
+    },
+    "features": [
+      "Wireless dimming",
+      "Sleep friendly glow",
+      "Ceramic finish",
+      "Schedule routines"
+    ],
+    "badges": ["Home favorite"],
+    "popularity": 64,
+    "createdAt": "2026-02-19"
+  },
+  {
+    "id": 5,
+    "slug": "aero-lite-wireless-mouse",
+    "name": "Aero Lite Wireless Mouse",
+    "category": "Accessories",
+    "brand": "Orbitix",
+    "price": 39.95,
+    "rating": 4.3,
+    "reviews": 42,
+    "stock": 37,
+    "description": "Comfort-focused wireless mouse with silent clicks, fast scrolling, and precise sensor tracking for office and gaming use.",
+    "shortDescription": "Travel-ready ergonomic mouse with adaptive tracking.",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Connection": "2.4GHz wireless",
+      "Battery": "12 months",
+      "DPI": "800–3200",
+      "Buttons": "6 programmable"
+    },
+    "features": [
+      "Ultra-smooth glide",
+      "Silent click design",
+      "Compact form factor",
+      "Adjustable DPI"
+    ],
+    "badges": ["Budget pick"],
+    "popularity": 55,
+    "createdAt": "2026-05-05"
+  },
+  {
+    "id": 6,
+    "slug": "ceres-studio-true-wireless-earbuds",
+    "name": "Ceres Studio True Wireless Earbuds",
+    "category": "Audio",
+    "brand": "SoundNova",
+    "price": 99.99,
+    "rating": 4.2,
+    "reviews": 64,
+    "stock": 29,
+    "description": "Compact earbuds with spatial audio, sweat-resistant fit, and a charging case delivering 26 hours of total playtime.",
+    "shortDescription": "Studio-grade earbuds for workouts and travel.",
+    "images": [
+      "https://images.unsplash.com/photo-1512496015851-a73f0f5efd6e?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1512314889357-e157c22f938d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Playback": "6 hours per charge",
+      "Case": "20 extra hours",
+      "Resistance": "IPX5",
+      "Bluetooth": "5.2"
+    },
+    "features": [
+      "Spatial audio",
+      "Touch controls",
+      "Quick pairing",
+      "Voice assistant support"
+    ],
+    "badges": ["Customer favorite"],
+    "popularity": 72,
+    "createdAt": "2026-05-29"
+  },
+  {
+    "id": 7,
+    "slug": "nova-smart-home-security-kit",
+    "name": "Nova Smart Home Security Kit",
+    "category": "Home",
+    "brand": "SecureNest",
+    "price": 249.0,
+    "rating": 4.6,
+    "reviews": 93,
+    "stock": 9,
+    "description": "Complete smart home bundle with a hub, door sensors, and a weatherproof camera with mobile alerts.",
+    "shortDescription": "All-in-one smart security kit with intelligent monitoring.",
+    "images": [
+      "https://images.unsplash.com/photo-1581578016454-7aaa9e4e7d04?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Components": "Hub + 3 sensors + camera",
+      "Connectivity": "WiFi + Bluetooth",
+      "Alerts": "Push notifications",
+      "Installation": "Tool-free"
+    },
+    "features": [
+      "24/7 monitoring",
+      "Mobile app control",
+      "Night vision camera",
+      "Expandable system"
+    ],
+    "badges": ["New arrival"],
+    "popularity": 68,
+    "createdAt": "2026-06-04"
+  },
+  {
+    "id": 8,
+    "slug": "flux-14-inch-ultrabook",
+    "name": "Flux 14\" Ultrabook",
+    "category": "Computing",
+    "brand": "Vortex",
+    "price": 1199.0,
+    "rating": 4.9,
+    "reviews": 38,
+    "stock": 7,
+    "description": "Thin and light laptop with a premium display, modern processor, and fast SSD storage built for creators on the move.",
+    "shortDescription": "High-performance ultrabook for creative workflows.",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Processor": "Intel Core i7",
+      "Memory": "16GB RAM",
+      "Storage": "512GB SSD",
+      "Display": "14\" 2.8K"
+    },
+    "features": [
+      "Ultra-thin chassis",
+      "Fast charging",
+      "Edge-to-edge display",
+      "Thunderbolt 4"
+    ],
+    "badges": ["Premium"],
+    "popularity": 91,
+    "createdAt": "2026-03-25"
+  },
+  {
+    "id": 9,
+    "slug": "terra-fit-yoga-mat",
+    "name": "Terra Fit Yoga Mat",
+    "category": "Fitness",
+    "brand": "PureMotion",
+    "price": 45.0,
+    "rating": 4.1,
+    "reviews": 31,
+    "stock": 46,
+    "description": "Eco-friendly yoga mat with non-slip grip, cushioning support, and temperature-resistant performance.",
+    "shortDescription": "Sustainable non-slip mat for daily training.",
+    "images": [
+      "https://images.unsplash.com/photo-1518611012118-c3b13a405d04?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1549548400-9b88bab630a0?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Length": "72 inches",
+      "Thickness": "6mm",
+      "Material": "Natural rubber",
+      "Weight": "2.3 lbs"
+    },
+    "features": [
+      "Eco-friendly material",
+      "High-density cushion",
+      "Easy-clean finish",
+      "Ultra-grip texture"
+    ],
+    "badges": ["Eco-friendly"],
+    "popularity": 58,
+    "createdAt": "2026-01-18"
+  },
+  {
+    "id": 10,
+    "slug": "vista-pro-4k-monitor",
+    "name": "Vista Pro 4K Monitor",
+    "category": "Computing",
+    "brand": "Visionary",
+    "price": 599.0,
+    "rating": 4.8,
+    "reviews": 75,
+    "stock": 13,
+    "description": "Stunning 27-inch 4K display with HDR, slim bezels, and a fully adjustable stand for work and play.",
+    "shortDescription": "Ultra-clear 4K monitor with HDR and slim design.",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Size": "27 inches",
+      "Resolution": "3840 x 2160",
+      "Refresh Rate": "120Hz",
+      "Panel": "IPS"
+    },
+    "features": [
+      "HDR 600",
+      "Color calibrated",
+      "VESA mount ready",
+      "Low blue light"
+    ],
+    "badges": ["Featured"],
+    "popularity": 83,
+    "createdAt": "2026-04-30"
+  },
+  {
+    "id": 11,
+    "slug": "luma-wave-55-oled-tv",
+    "name": "LumaWave 55-inch OLED TV",
+    "category": "Home Entertainment",
+    "brand": "LumaWave",
+    "price": 999.0,
+    "rating": 4.8,
+    "reviews": 58,
+    "stock": 11,
+    "description": "A cinematic OLED TV with ultra-thin bezels, Dolby Atmos support, and adaptive brightness for stunning visuals.",
+    "shortDescription": "55-inch OLED TV with immersive audio and sharp imagery.",
+    "images": [
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Screen Size": "55 inches",
+      "Resolution": "4K UHD",
+      "Audio": "Dolby Atmos",
+      "Smart TV": "Yes"
+    },
+    "features": [
+      "OLED display",
+      "Voice remote",
+      "Game mode",
+      "Smart home ready"
+    ],
+    "badges": ["Hot deal"],
+    "popularity": 89,
+    "createdAt": "2026-06-01"
+  },
+  {
+    "id": 12,
+    "slug": "orbit-stream-wireless-charger",
+    "name": "Orbit Stream Wireless Charger",
+    "category": "Accessories",
+    "brand": "Orbitix",
+    "price": 34.99,
+    "rating": 4.4,
+    "reviews": 78,
+    "stock": 52,
+    "description": "Fast-charge pad with magnetic alignment, ambient glow, and support for phones, earbuds, and smartwatches.",
+    "shortDescription": "Magnetic wireless charger for all your devices.",
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1545235617-1c1a6d3d6221?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Output": "15W",
+      "Compatibility": "Qi-enabled devices",
+      "Ports": "USB-C pass-through",
+      "LED": "Ambient glow"
+    },
+    "features": [
+      "Fast charge",
+      "Magnetic hold",
+      "Anti-slip surface",
+      "Compact travel design"
+    ],
+    "badges": ["Best value"],
+    "popularity": 63,
+    "createdAt": "2026-05-21"
+  },
+  {
+    "id": 13,
+    "slug": "pulsegrow-indoor-garden",
+    "name": "PulseGrow Indoor Garden",
+    "category": "Home",
+    "brand": "BotanicTech",
+    "price": 179.99,
+    "rating": 4.6,
+    "reviews": 44,
+    "stock": 15,
+    "description": "Smart indoor garden kit with adjustable LED grow lights, nutrient reminders, and a self-watering tray.",
+    "shortDescription": "Compact smart garden for vibrant indoor plants.",
+    "images": [
+      "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1524594154901-6c33f780140f?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Light": "Full spectrum LEDs",
+      "Capacity": "6 plant pods",
+      "Water Tank": "1.5L",
+      "App": "Yes"
+    },
+    "features": [
+      "Self-watering",
+      "Smart schedules",
+      "Energy efficient",
+      "Indoor climate control"
+    ],
+    "badges": ["Eco-friendly"],
+    "popularity": 61,
+    "createdAt": "2026-05-11"
+  },
+  {
+    "id": 14,
+    "slug": "nimbus-pro-running-shoes",
+    "name": "Nimbus Pro Running Shoes",
+    "category": "Fitness",
+    "brand": "StrideLine",
+    "price": 129.99,
+    "rating": 4.5,
+    "reviews": 69,
+    "stock": 34,
+    "description": "Lightweight running shoes with responsive cushioning, breathable mesh, and premium outsole traction.",
+    "shortDescription": "Performance shoes for daily runs and training.",
+    "images": [
+      "https://images.unsplash.com/photo-1519741497282-8bf6b17f65d7?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1528701800489-20f8abd09f63?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Upper": "Breathable mesh",
+      "Cushion": "Responsive foam",
+      "Weight": "8.6 oz",
+      "Terrain": "Road"
+    },
+    "features": [
+      "Lightweight comfort",
+      "Padded heel",
+      "Breathable design",
+      "Durable outsole"
+    ],
+    "badges": ["Runner's pick"],
+    "popularity": 75,
+    "createdAt": "2026-04-22"
+  },
+  {
+    "id": 15,
+    "slug": "rover-explorer-dslr",
+    "name": "Rover Explorer DSLR",
+    "category": "Photography",
+    "brand": "AperturePro",
+    "price": 849.0,
+    "rating": 4.7,
+    "reviews": 54,
+    "stock": 8,
+    "description": "Mirrorless DSLR-style camera with 24MP sensor, 4K video, and advanced autofocus for travel and creative shoots.",
+    "shortDescription": "Versatile camera for photography and video creators.",
+    "images": [
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=900&q=80"
+    ],
+    "specs": {
+      "Sensor": "24MP CMOS",
+      "Video": "4K 30fps",
+      "Focus": "Hybrid AF",
+      "Lens": "Included 18-55mm"
+    },
+    "features": [
+      "Low-light performance",
+      "Flip screen",
+      "Built-in Wi-Fi",
+      "Creative modes"
+    ],
+    "badges": ["Photo-ready"],
+    "popularity": 82,
+    "createdAt": "2026-05-14"
+  }
+]

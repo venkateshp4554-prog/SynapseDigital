@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Activity, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Activity, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 
@@ -28,20 +28,20 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden bg-radial-glow bg-grid-pattern transition-colors duration-300">
+    <section id="Home" className="relative min-h-screen flex items-center justify-center pt-20 sm:pt-28 pb-10 sm:pb-16 overflow-hidden bg-radial-glow bg-grid-pattern transition-colors duration-300">
       {/* Background Orbs simulating GitHub glowing nebulas */}
-      <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full bg-violet-600/10 blur-[130px] dark:bg-violet-600/15 animate-pulse-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-cyan-500/10 blur-[130px] dark:bg-cyan-500/10 animate-pulse-slow delay-2000" />
+      <div className="absolute top-1/4 left-1/4 w-48 sm:w-80 h-48 sm:h-80 rounded-full bg-violet-600/10 blur-[130px] dark:bg-violet-600/15 animate-pulse-slow" />
+      <div className="absolute bottom-1/4 right-1/4 w-56 sm:w-96 h-56 sm:h-96 rounded-full bg-cyan-500/10 blur-[130px] dark:bg-cyan-500/10 animate-pulse-slow delay-2000" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           
           {/* Left Column: Headline and Copy (GitHub style text column with timeline line) */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-7 text-left space-y-6 pl-0 sm:pl-8 relative"
+            className="lg:col-span-7 text-left space-y-4 sm:space-y-6 pl-0 sm:pl-8 relative"
           >
             {/* Vertical timeline connector line */}
             <div className="absolute left-0 top-3 bottom-0 w-[2px] bg-gradient-to-b from-[#2ea44f] via-violet-500 to-transparent hidden sm:block">
@@ -50,18 +50,18 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Pill Feature Tag */}
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-200 dark:border-dark-border bg-white/50 dark:bg-[#161b22]/50 text-slate-800 dark:text-[#c9d1d9] text-xs font-semibold shadow-sm"
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-500 animate-pulse" />
-              <span className="text-[11px] tracking-wide">Synapse v2.4 Platform Live</span>
-            </motion.div>
+              <span className="text-[11px] tracking-wide">SeVenDor Solutions v2.4 Platform Live</span>
+            </motion.div> */}
 
             {/* GitHub-style bold headline */}
             <motion.h1
               variants={itemVariants}
-              className="font-outfit font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15] text-slate-900 dark:text-white"
+              className="font-outfit font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight leading-[1.12] text-slate-900 dark:text-white hero-title"
             >
               Building Smart <br />
               <span className="text-gradient-purple-cyan animate-gradient-x bg-gradient-to-r from-violet-500 via-indigo-400 to-cyan-400">
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
 
             <motion.p
               variants={itemVariants}
-              className="text-slate-500 dark:text-zinc-400 text-base sm:text-lg max-w-xl leading-relaxed"
+              className="text-slate-500 dark:text-zinc-400 text-base sm:text-lg max-w-xl leading-relaxed hero-subtitle"
             >
               The premium engineering agency for software, cloud, and mobile products. We build modern, robust applications with speed, security, and precision.
             </motion.p>
@@ -82,10 +82,10 @@ export const Hero: React.FC = () => {
               variants={itemVariants}
               className="flex flex-wrap gap-3 pt-2"
             >
-              <a href="#contact" className="btn-primary flex items-center gap-2">
+              <a href="#contact" className="btn-primary flex items-center gap-2 hero-cta">
                 Get Started <ArrowRight className="w-4 h-4" />
               </a>
-              <a href="#services" className="btn-secondary flex items-center justify-center">
+              <a href="#services" className="btn-secondary flex items-center justify-center hero-cta">
                 Explore Services
               </a>
             </motion.div>
@@ -95,12 +95,16 @@ export const Hero: React.FC = () => {
               variants={itemVariants}
               className="pt-8 border-t border-slate-200 dark:border-dark-border flex gap-8 text-slate-500 dark:text-zinc-500 text-xs sm:text-sm"
             >
-              <div className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4.5 h-4.5 text-emerald-500" />
+              <div className="flex items-center gap-2">
+                <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-md shadow-emerald-500/30 flex items-center justify-center ring-1 ring-white/20">
+                  <ShieldCheck className="w-4 h-4" strokeWidth={2.5} />
+                </div>
                 <span>Enterprise Grade Security</span>
               </div>
-              <div className="flex items-center gap-1.5">
-                <Activity className="w-4.5 h-4.5 text-cyan-500" />
+              <div className="flex items-center gap-2">
+                <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 text-white shadow-md shadow-cyan-500/30 flex items-center justify-center ring-1 ring-white/20">
+                  <Activity className="w-4 h-4" strokeWidth={2.5} />
+                </div>
                 <span>99.9% Project Uptime SLA</span>
               </div>
             </motion.div>
@@ -114,7 +118,7 @@ export const Hero: React.FC = () => {
             className="lg:col-span-5 relative w-full flex justify-center items-center"
           >
             {/* Spinning Wireframe Globe */}
-            <div className="relative w-full max-w-[420px] aspect-square flex items-center justify-center select-none">
+            <div className="relative w-full max-w-[280px] sm:max-w-[350px] md:max-w-[420px] aspect-square flex items-center justify-center select-none">
               {/* Large ambient glowing nebula behind globe */}
               <div className="absolute w-72 h-72 rounded-full bg-gradient-to-tr from-violet-600/10 to-cyan-500/10 dark:from-violet-600/20 dark:to-cyan-500/20 blur-3xl" />
               
@@ -122,7 +126,7 @@ export const Hero: React.FC = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-slate-200 dark:border-zinc-800 flex items-center justify-center"
+                className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full border border-slate-200 dark:border-zinc-800 flex items-center justify-center"
               >
                 {/* Dashed outer atmospheric layer */}
                 <div className="absolute inset-0 rounded-full border border-dashed border-violet-500/25 dark:border-cyan-500/15 scale-[1.08] animate-spin-slow" />

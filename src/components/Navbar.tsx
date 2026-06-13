@@ -1,120 +1,134 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Cpu } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Menu, X, Heart, ShoppingCart, User, Search } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
+import { CartDropdown } from './CartDropdown';
+import { useShop } from '../context/ShopContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { cartCount, wishlistCount, user } = useShop();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Tech Stack', href: '#tech' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'Contact', href: '#contact' },
-  ];
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'glass-nav py-3 shadow-md'
-          : 'bg-transparent py-5'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-600 to-cyan-500 text-white shadow-lg shadow-violet-500/20 group-hover:shadow-cyan-500/30 transition-all duration-300">
-              <Cpu className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-              <div className="absolute inset-0 rounded-xl bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
-            </div>
-            <span className="font-outfit font-bold text-xl tracking-tight text-slate-900 dark:text-white">
-              Synapse<span className="text-violet-500 dark:text-cyan-400">Digital</span>
-            </span>
-          </a>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-violet-600 dark:hover:text-cyan-400 transition-colors relative group py-2"
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-violet-500 to-cyan-400 transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
-          </nav>
-
-          {/* Desktop Right Panel */}
-          <div className="hidden md:flex items-center gap-4">
-            <ThemeToggle />
-            <a href="#contact" className="btn-primary py-2 px-5 text-sm">
-              Get Started
-            </a>
+    <header className={`fixed inset-x-0 top-0 z-50 transition duration-300 ${isScrolled ? 'glass-nav shadow-xl' : 'bg-transparent'} `}>
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+        <Link to="/" className="flex items-center gap-3 text-lg font-semibold text-slate-900 dark:text-white">
+          <img src="/logo.png" alt="SeVenDor Solutions" className="h-12 w-12 rounded-3xl object-cover logo-3d" onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/placeholder.svg'; }} />
+          <div className="space-y-0.5">
+            <p className="text-base font-semibold">SeVenDor</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Solutions</p>
           </div>
+        </Link>
 
-          {/* Mobile Menu Actions */}
-          <div className="flex md:hidden items-center gap-3">
-            <ThemeToggle />
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-zinc-800 transition-colors"
-              aria-label="Toggle Menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        <nav className="hidden items-center gap-6 md:flex">
+          {[
+            { label: 'Home', path: '/' },
+            { label: 'Products', path: '/products' },
+            { label: 'About', path: '/about' },
+            { label: 'FAQ', path: '/faq' },
+            { label: 'Contact', path: '/contact' }
+          ].map((item) => (
+            <Link key={item.label} to={item.path} className="text-sm font-medium text-slate-600 transition hover:text-violet-600 dark:text-slate-300 dark:hover:text-cyan-400">
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <div className="hidden items-center gap-3 md:flex">
+            <button onClick={() => navigate('/products')} className="relative inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 shadow-sm transition hover:border-violet-500 hover:text-violet-600 dark:border-zinc-800 dark:bg-zinc-950 dark:text-slate-200 dark:hover:border-cyan-400 dark:hover:text-cyan-300">
+              <Search className="mr-2 h-4 w-4" />
+              Search
             </button>
+            <ThemeToggle />
           </div>
+
+          <div className="relative hidden md:block">
+            <button
+              onClick={() => setDropdownVisible((current) => !current)}
+              className="relative inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-violet-500 dark:border-zinc-800 dark:bg-zinc-950 dark:text-slate-200"
+              aria-label="Open cart preview"
+            >
+              <ShoppingCart className="h-5 w-5" />
+              {cartCount > 0 && <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1.5 text-[10px] text-white">{cartCount}</span>}
+            </button>
+            <AnimatePresence>
+              {dropdownVisible ? (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className="absolute right-0 mt-3"
+                >
+                  <CartDropdown />
+                </motion.div>
+              ) : null}
+            </AnimatePresence>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => navigate('/login')}
+            className="hidden items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-violet-500 hover:text-violet-600 dark:border-zinc-800 dark:bg-zinc-950 dark:text-slate-200 dark:hover:border-cyan-400 dark:hover:text-cyan-300 md:flex"
+          >
+            <User className="h-4 w-4" />
+            {user ? 'Profile' : 'Sign in'}
+          </button>
+          <Link to="/wishlist" className="relative inline-flex h-12 w-12 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-violet-500 dark:border-zinc-800 dark:bg-zinc-950 dark:text-slate-200">
+            <Heart className="h-5 w-5" />
+            {wishlistCount > 0 && <span className="absolute -right-1 -top-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1.5 text-[10px] text-white">{wishlistCount}</span>}
+          </Link>
+
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-3 text-slate-700 transition hover:border-violet-500 hover:text-violet-600 dark:border-zinc-800 dark:bg-zinc-950 dark:text-slate-200 md:hidden"
+            onClick={() => setIsOpen((current) => !current)}
+          >
+            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            className="md:hidden border-t border-slate-200 bg-white/95 dark:border-zinc-800 dark:bg-zinc-950/95"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden border-b border-slate-200/50 dark:border-white/5 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-lg overflow-hidden"
           >
-            <div className="px-4 pt-2 pb-6 space-y-3">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
+            <div className="space-y-2 px-4 pb-4 pt-3">
+              {[
+                { label: 'Home', path: '/' },
+                { label: 'Products', path: '/products' },
+                { label: 'About', path: '/about' },
+                { label: 'FAQ', path: '/faq' },
+                { label: 'Contact', path: '/contact' }
+              ].map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-zinc-800 hover:text-violet-600 dark:hover:text-cyan-400 transition-colors"
+                  className="block rounded-3xl px-4 py-3 text-base font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-zinc-900"
                 >
-                  {item.name}
-                </a>
+                  {item.label}
+                </Link>
               ))}
-              <div className="pt-4 border-t border-slate-200 dark:border-zinc-800 flex justify-center">
-                <a
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                  className="w-full text-center btn-primary py-2.5"
-                >
-                  Get Started
-                </a>
-              </div>
+              <button onClick={() => { setIsOpen(false); navigate('/login'); }} className="btn-primary w-full py-3">
+                {user ? 'Profile' : 'Sign in'}
+              </button>
             </div>
           </motion.div>
         )}
@@ -122,4 +136,5 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+
 export default Navbar;

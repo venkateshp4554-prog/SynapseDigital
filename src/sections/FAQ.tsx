@@ -78,7 +78,9 @@ export const FAQ: React.FC = () => {
                   className="w-full flex items-center justify-between p-5 text-left font-semibold text-slate-800 dark:text-white font-outfit text-sm sm:text-base hover:bg-slate-100/50 dark:hover:bg-zinc-900/30 transition-colors"
                 >
                   <div className="flex items-center gap-3">
-                    <HelpCircle className="w-5 h-5 text-violet-500 flex-shrink-0" />
+                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-fuchsia-500 text-white shadow-md shadow-violet-500/30 flex items-center justify-center ring-1 ring-white/20">
+                      <HelpCircle className="w-4 h-4" strokeWidth={2.5} />
+                    </div>
                     <span>{faq.q}</span>
                   </div>
                   <motion.div
